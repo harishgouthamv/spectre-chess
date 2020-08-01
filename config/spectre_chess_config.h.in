@@ -1,0 +1,2 @@
+#define SPECTRE_VERSION_MAJOR @spectre-chess_VERSION_MAJOR@
+#define SPECTRE_VERSION_MINOR @spectre-chess_VERSION_MINOR@
