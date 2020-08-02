@@ -1,2 +1,16 @@
 #define SPECTRE_VERSION_MAJOR @spectre-chess_VERSION_MAJOR@
 #define SPECTRE_VERSION_MINOR @spectre-chess_VERSION_MINOR@
+
+#define SPECTRE_BANNER_01 "███████╗██████╗ ███████╗ ██████╗████████╗██████╗ ███████╗    "
+#define SPECTRE_BANNER_02 "██╔════╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔════╝    "
+#define SPECTRE_BANNER_03 "███████╗██████╔╝█████╗  ██║        ██║   ██████╔╝█████╗      "
+#define SPECTRE_BANNER_04 "╚════██║██╔═══╝ ██╔══╝  ██║        ██║   ██╔══██╗██╔══╝      "
+#define SPECTRE_BANNER_05 "███████║██║     ███████╗╚██████╗   ██║   ██║  ██║███████╗    "
+#define SPECTRE_BANNER_06 "╚══════╝╚═╝     ╚══════╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝    "
+#define SPECTRE_BANNER_07 "                                                             "
+#define SPECTRE_BANNER_08 "         ██████╗██╗  ██╗███████╗███████╗███████╗             "
+#define SPECTRE_BANNER_09 "        ██╔════╝██║  ██║██╔════╝██╔════╝██╔════╝             "
+#define SPECTRE_BANNER_10 "        ██║     ███████║█████╗  ███████╗███████╗             "
+#define SPECTRE_BANNER_11 "        ██║     ██╔══██║██╔══╝  ╚════██║╚════██║             "
+#define SPECTRE_BANNER_12 "        ╚██████╗██║  ██║███████╗███████║███████║             "
+#define SPECTRE_BANNER_13 "         ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝             "
