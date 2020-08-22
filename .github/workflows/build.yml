@@ -1,0 +1,25 @@
+name: spectre-build
+
+on:
+  push:
+    branches:
+    - 'feature/**'
+    - 'master'
+  pull_request:
+    branches:
+    - 'feature/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
+      
