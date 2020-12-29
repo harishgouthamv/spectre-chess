@@ -1,5 +1,6 @@
 # build directory
 build/
+
 # C++ ignore
 # Prerequisites
 *.d

@@ -10,7 +10,7 @@ void displayName();
 int main(int argc, char const *argv[]) {
   displayName();
   uci::InterfaceController controller;
-  return controller.init();
+  return controller.Init();
 }
 
 void displayName()

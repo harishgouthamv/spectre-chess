@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <regex>
 
 using namespace std;
 
@@ -33,11 +34,14 @@ private:
   /// @brief flag to track the UCI mode of operation.
   bool uciFlag_ = false;
 
+  /// @brief Get the command Request from UI.
+  bool GetOption(string& str);
+
 public:
 
   /// @brief Initialize the UCI mode of operation.
   /// @return Integer status code.
-  int init();
+  int Init();
 };
 
 }
