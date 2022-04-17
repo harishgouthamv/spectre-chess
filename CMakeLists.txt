@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 
 project(spectre-chess VERSION 0.1)
 
@@ -7,7 +7,7 @@ set(TARGET_NAME spectre-chess)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Boost REQUIRED)
+#find_package(Boost REQUIRED)
 
 include_directories(inc)
 
