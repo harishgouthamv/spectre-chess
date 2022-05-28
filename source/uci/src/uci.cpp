@@ -5,30 +5,41 @@ namespace spectre
 
 void UCI::Initialize()
 {
-  std::unique_lock lck{shutdownMutex_};
-  std::cout << "Entry " << __func__ << std::endl;
-
   isRunning_ = true;
-  std::cout << "Exit " << __func__ << std::endl;
 }
 
 void UCI::Run()
 {
-  std::unique_lock lck{shutdownMutex_};
   std::cout << "Entry " << __func__ << std::endl;
-  while(isRunning_)
+
+  std::string icmd;
+
+  do
   {
-    shutdownVar_.wait(lck);
+    if(!getline(std::cin, icmd))
+    {
+      icmd = "quit";
+    }
+    std::cout << "in: " << icmd << std::endl;
+
+    std::string token;
+    std::istringstream is(icmd);
+    is >> std::skipws >> token;
+
+    if(token == "quit")
+    {
+      isRunning_ = false;
+    }
+
   }
+  while(isRunning_);
   std::cout << "Exit " << __func__ << std::endl;
 }
 
 void UCI::RequestShutdown()
 {
-  std::unique_lock lck{shutdownMutex_};
   std::cout << "Entry " << __func__ << std::endl;
   isRunning_ = false;
-  shutdownVar_.notify_all();
   std::cout << "Exit " << __func__ << std::endl;
 }
 

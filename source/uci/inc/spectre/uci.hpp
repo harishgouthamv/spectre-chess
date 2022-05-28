@@ -2,6 +2,8 @@
 #define _SPECTRE_UCI_HPP_
 
 #include <iostream>
+#include <sstream>
+#include <atomic>
 #include <mutex>
 #include <condition_variable>
 
@@ -24,11 +26,7 @@ public:
   void Shutdown();
 
 private:
-  std::mutex shutdownMutex_{};
-  
-  std::condition_variable shutdownVar_{};
-  
-  bool isRunning_{false};
+  std::atomic_bool isRunning_{false};
 
 };
 

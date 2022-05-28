@@ -24,8 +24,8 @@ void Lifecycle::Execute()
   UCI uci;
   uci.Initialize();
   auto urun = std::async(&spectre::UCI::Run, &uci);
-  WaitForSignal();
-  uci.RequestShutdown();
+  //WaitForSignal();
+  //uci.RequestShutdown();
   urun.wait();
   uci.Shutdown();
 }
