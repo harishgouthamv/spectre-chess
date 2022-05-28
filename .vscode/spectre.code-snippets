@@ -1,0 +1,20 @@
+{
+  "CppGuard": {
+    "prefix": "guard",
+    "body": [
+      "#ifndef _SPECTRE_${TM_FILENAME/([^\\.]*)(\\.)*/${1:/upcase}${2:+_}/g}_",
+      "#define _SPECTRE_${TM_FILENAME/([^\\.]*)(\\.)*/${1:/upcase}${2:+_}/g}_",
+      "\n#endif // _SPECTRE_${TM_FILENAME/([^\\.]*)(\\.)*/${1:/upcase}${2:+_}/g}_"
+    ],
+    "description": "Include Guards for CPP"
+  },
+  "SpectreNamespace": {
+    "prefix": "nspectre",
+    "body": [
+      "namespace spectre",
+      "{",
+      "$0\n}"
+    ],
+    "description": "Namespace Spectre"
+  }
+}

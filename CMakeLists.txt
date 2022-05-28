@@ -8,14 +8,21 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #find_package(Boost REQUIRED)
+find_package(Threads REQUIRED)
 
-include_directories(inc)
+include_directories(
+    source/lifecycle/inc
+    source/uci/inc
+)
 
 add_executable(${TARGET_NAME}
-               src/main.cpp
-               src/uci/interface.cpp
-                )
+    source/lifecycle/src/main.cpp
+    source/lifecycle/src/lifecycle.cpp
+    source/uci/src/uci.cpp
+)
 
-configure_file(config/spectre_chess_config.h.in spectre_chess_config.h)
+configure_file(source/config/spectre_chess_config.hpp.in spectre_chess_config.hpp)
 
 target_include_directories(${TARGET_NAME} PUBLIC "${PROJECT_BINARY_DIR}")
+
+target_link_libraries(${TARGET_NAME} PRIVATE Threads::Threads)

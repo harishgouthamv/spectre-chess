@@ -1,6 +1,6 @@
-#include "uci/interface.h"
+#include "spectre/interface.h"
 
-namespace uci
+namespace spectre
 {
 
 int InterfaceController::Init()
